@@ -39,5 +39,5 @@ jobs: # 본격적인 동작 시작
       - name: Docker Image Build and Push
         run: |
           docker build -t gdsc .
-          docker tag gdsc:lastest ${{ secrets.DOCKER_USERNAME }}/gdsc:lastest
-          docker push ${{ secrets.DOCKER_USERNAME }}/gdsc:lastest
+          docker tag gdsc:latest ${{ secrets.DOCKER_USERNAME }}/gdsc:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/gdsc:latest
