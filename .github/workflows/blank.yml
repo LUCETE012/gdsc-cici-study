@@ -23,3 +23,9 @@ jobs: # 본격적인 동작 시작
 
       - name: Install Node Package
         run: yarn install --production
+
+      - name: Install jest
+        run: yarn add jest
+
+      - name: Run test
+        run: yarn test
