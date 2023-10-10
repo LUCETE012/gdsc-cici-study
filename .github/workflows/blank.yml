@@ -1,0 +1,25 @@
+
+name: CI
+
+on: # 트리거되는 조건
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs: # 본격적인 동작 시작
+  build:
+    runs-on: ubuntu-latest
+
+    steps: # 아래 순서대로 실행
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.8.1
+        with:
+          node-version: 18.x
+
+      - name: Install Node Package
+        run: yarn install --production
