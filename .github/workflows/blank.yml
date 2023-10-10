@@ -40,4 +40,4 @@ jobs: # 본격적인 동작 시작
         run: |
           docker build -t gdsc .
           docker tag gdsc:lastest ${{ secrets.DOCKER_USERNAME }}/gdsc:lastest
-          docker push ${{ secrets.DOCKER_USERNAME }}/gdsc.lastest
+          docker push ${{ secrets.DOCKER_USERNAME }}/gdsc:lastest
