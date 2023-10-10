@@ -28,4 +28,4 @@ jobs: # 본격적인 동작 시작
         run: yarn add jest
 
       - name: Run test
-        run: yarn test
+        run: sudo yarn test
