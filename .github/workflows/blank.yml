@@ -29,3 +29,9 @@ jobs: # 본격적인 동작 시작
 
       - name: Run test
         run: sudo yarn test
+
+      - name: Docker Login
+        uses: docker/login-action@v3.0.0
+        with:
+          username: # optional
+          password: # optional
